@@ -1,0 +1,68 @@
+$namespace: 'sn'; // 所有的组件以sn开头，如sn-input
+$element-separator: '__'; // 元素以__分割，如sn-input__inner
+$modifier-separator: '--'; // 修饰符以--分割，如sn-input--mini
+$state-prefix: 'is-'; // 状态以is-开头，如is-disabled
+
+@mixin b($block) {
+    $B: $namespace+'-'+$block !global; // 使用el-拼接组件名
+
+    .#{$B} {
+        @content;
+    }
+}
+
+@mixin e($element) {
+    $E: $element !global;
+    $selector: &;
+    $currentSelector: "";
+    @each $unit in $element {
+      $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+    }
+  
+    @if hitAllSpecialNestRule($selector) {
+      @at-root {
+        #{$selector} {
+          #{$currentSelector} {
+            @content;
+          }
+        }
+      }
+    } @else {
+      @at-root {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  }
+
+@mixin m($modifier) {
+    $selector: &;
+    $currentSelector: "";
+
+    @each $unit in $modifier {
+        $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+    }
+
+    @at-root {
+        #{$currentSelector} {
+            @content;
+        }
+    }
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
