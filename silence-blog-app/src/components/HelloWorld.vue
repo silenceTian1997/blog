@@ -16,7 +16,10 @@ const count = ref(0)
     <button class="sn-button--center" type="button" @click="count++">count is {{ count }}
       <button class="sn-button__header" type="button" @click="count++">count is {{ count }}</button>
     </button>
-  
+    <n-button type="primary">
+      Primary
+    </n-button>
+
   </div>
 </template>
 
