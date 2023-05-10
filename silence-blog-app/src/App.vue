@@ -1,10 +1,12 @@
 <script setup lang="ts">
+ import SnHeaderBar from './components/SnHeaderBar.vue'
  import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <div>
-    <HelloWorld/>
+    <SnHeaderBar/>
+    <HelloWorld />
   </div>
 </template>
 

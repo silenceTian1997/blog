@@ -1,13 +1,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+withDefaults(defineProps<{
+  msg:string,
+  title?:string
+}>(),{
+  msg:'hello'
+})
 
-defineProps<{ msg: string }>()
+
+
 
 const count = ref(0)
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
+  <h1>{{ title }}</h1>
   <div class="hello">
     hello <span class="text"> world </span>
   </div>
@@ -37,14 +45,14 @@ const count = ref(0)
 }
 
 @include b(button) {
-    color: blue;
-    @include m(center) {
-       padding-bottom: 30px;
+  color: blue;
 
-       @include e(header) {
-            padding-top: 30px;
-         }
+  @include m(center) {
+    padding-bottom: 30px;
+
+    @include e(header) {
+      padding-top: 30px;
+    }
   }
 }
-
 </style>
