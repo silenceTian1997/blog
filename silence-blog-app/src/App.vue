@@ -1,12 +1,19 @@
 <script setup lang="ts">
- import SnHeaderBar from './components/SnHeaderBar.vue'
- import HelloWorld from './components/HelloWorld.vue'
+import SnHeaderBar from './components/SnHeaderBar.vue'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <div>
-    <SnHeaderBar/>
+    <SnHeaderBar />
     <HelloWorld />
+
+    <router-view v-slot="{ Component }">
+      <KeepAlive :include="['about']">
+        <component :is='Component'></component>
+      </KeepAlive>
+    </router-view>
+
   </div>
 </template>
 
@@ -17,9 +24,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
