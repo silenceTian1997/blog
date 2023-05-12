@@ -1,19 +1,15 @@
 <script setup lang="ts">
-import SnHeaderBar from './components/SnHeaderBar.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import SnHeaderBar from "./components/SnHeaderBar.vue";
 </script>
 
 <template>
   <div>
     <SnHeaderBar />
-    <HelloWorld />
-
     <router-view v-slot="{ Component }">
       <KeepAlive :include="['about']">
         <component :is='Component'></component>
       </KeepAlive>
     </router-view>
-
   </div>
 </template>
 
