@@ -236,6 +236,22 @@
     "@vue/compiler-core" "3.2.47"
     "@vue/shared" "3.2.47"
 
+"@vue/compiler-sfc@^3.2.29", "@vue/compiler-sfc@3.2.47":
+  "integrity" "sha512-rog05W+2IFfxjMcFw10tM9+f7i/+FFpZJJ5XHX72NP9eC2uRD+42M3pYcQqDXVYoj74kHMSEdQ/WmCjt8JFksQ=="
+  "resolved" "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.2.47.tgz"
+  "version" "3.2.47"
+  dependencies:
+    "@babel/parser" "^7.16.4"
+    "@vue/compiler-core" "3.2.47"
+    "@vue/compiler-dom" "3.2.47"
+    "@vue/compiler-ssr" "3.2.47"
+    "@vue/reactivity-transform" "3.2.47"
+    "@vue/shared" "3.2.47"
+    "estree-walker" "^2.0.2"
+    "magic-string" "^0.25.7"
+    "postcss" "^8.1.10"
+    "source-map" "^0.6.1"
+
 "@vue/compiler-sfc@^3.3.0-beta.3":
   "integrity" "sha512-yL/4Sc67j6HyYBLVBaV8ZgJcufuHq4qSvKzpyzxI4G7KxVf5oTdyxJ+ZigtYw99+kwefBa8tCvkl/+wgIk0x6Q=="
   "resolved" "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.3.0-beta.4.tgz"
@@ -252,22 +268,6 @@
     "postcss" "^8.1.10"
     "source-map-js" "^1.0.2"
 
-"@vue/compiler-sfc@3.2.47":
-  "integrity" "sha512-rog05W+2IFfxjMcFw10tM9+f7i/+FFpZJJ5XHX72NP9eC2uRD+42M3pYcQqDXVYoj74kHMSEdQ/WmCjt8JFksQ=="
-  "resolved" "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.2.47.tgz"
-  "version" "3.2.47"
-  dependencies:
-    "@babel/parser" "^7.16.4"
-    "@vue/compiler-core" "3.2.47"
-    "@vue/compiler-dom" "3.2.47"
-    "@vue/compiler-ssr" "3.2.47"
-    "@vue/reactivity-transform" "3.2.47"
-    "@vue/shared" "3.2.47"
-    "estree-walker" "^2.0.2"
-    "magic-string" "^0.25.7"
-    "postcss" "^8.1.10"
-    "source-map" "^0.6.1"
-
 "@vue/compiler-ssr@3.2.47":
   "integrity" "sha512-wVXC+gszhulcMD8wpxMsqSOpvDZ6xKXSVWkf50Guf/S+28hTAXPDYRTbLQ3EDkOP5Xz/+SY37YiwDquKbJOgZw=="
   "resolved" "https://registry.npmjs.org/@vue/compiler-ssr/-/compiler-ssr-3.2.47.tgz"
@@ -283,6 +283,11 @@
   dependencies:
     "@vue/compiler-dom" "3.3.0-beta.4"
     "@vue/shared" "3.3.0-beta.4"
+
+"@vue/devtools-api@^6.5.0":
+  "integrity" "sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q=="
+  "resolved" "https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.5.0.tgz"
+  "version" "6.5.0"
 
 "@vue/reactivity-transform@3.2.47":
   "integrity" "sha512-m8lGXw8rdnPVVIdIFhf0LeQ/ixyHkH5plYuS83yop5n7ggVJU+z5v0zecwEnX7fa7HNLBhh2qngJJkxpwEEmYA=="
@@ -963,7 +968,15 @@
   "resolved" "https://registry.npmjs.org/vfonts/-/vfonts-0.0.3.tgz"
   "version" "0.0.3"
 
-"vite@^4.0.0", "vite@^4.3.2":
+"vite-plugin-vue-setup-extend@^0.4.0":
+  "integrity" "sha512-WMbjPCui75fboFoUTHhdbXzu4Y/bJMv5N9QT9a7do3wNMNHHqrk+Tn2jrSJU0LS5fGl/EG+FEDBYVUeWIkDqXQ=="
+  "resolved" "https://registry.npmjs.org/vite-plugin-vue-setup-extend/-/vite-plugin-vue-setup-extend-0.4.0.tgz"
+  "version" "0.4.0"
+  dependencies:
+    "@vue/compiler-sfc" "^3.2.29"
+    "magic-string" "^0.25.7"
+
+"vite@^4.0.0", "vite@^4.3.2", "vite@>=2.0.0":
   "integrity" "sha512-0gEnL9wiRFxgz40o/i/eTBwm+NEbpUeTWhzKrZDSdKm6nplj+z4lKz8ANDgildxHm47Vg8EUia0aicKbawUVVA=="
   "resolved" "https://registry.npmjs.org/vite/-/vite-4.3.5.tgz"
   "version" "4.3.5"
@@ -980,6 +993,13 @@
   "version" "0.2.12"
   dependencies:
     "evtd" "^0.2.2"
+
+"vue-router@^4.2.0":
+  "integrity" "sha512-c+usESa6ZoWsm4PPdzRSyenp5A4dsUtnDJnrI03fY1IpIihA9TK3x5ffgkFDpjhLJZewsXoKURapNLFdZjuqTg=="
+  "resolved" "https://registry.npmmirror.com/vue-router/-/vue-router-4.2.0.tgz"
+  "version" "4.2.0"
+  dependencies:
+    "@vue/devtools-api" "^6.5.0"
 
 "vue-template-compiler@^2.7.14":
   "integrity" "sha512-zyA5Y3ArvVG0NacJDkkzJuPQDF8RFeRlzV2vLeSnhSpieO6LK2OVbdLPi5MPPs09Ii+gMO8nY4S3iKQxBxDmWQ=="
@@ -998,7 +1018,7 @@
     "@volar/vue-typescript" "1.6.4"
     "semver" "^7.3.8"
 
-"vue@^3.0.0", "vue@^3.0.11", "vue@^3.2.25", "vue@^3.2.47", "vue@2 || 3", "vue@3.2.47":
+"vue@^3.0.0", "vue@^3.0.11", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.47", "vue@2 || 3", "vue@3.2.47":
   "integrity" "sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.47.tgz"
   "version" "3.2.47"

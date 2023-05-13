@@ -12,9 +12,12 @@ declare module '@vue/runtime-core' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NInput: typeof import('naive-ui')['NInput']
+    NLoadingBarProvider: typeof import('naive-ui')['NLoadingBarProvider']
     NMenu: typeof import('naive-ui')['NMenu']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SnHeaderBar: typeof import('./src/components/SnHeaderBar.vue')['default']
+    SnFooterBar: typeof import('./src/components/SnFooterBar/index.vue')['default']
+    SnHeaderBar: typeof import('./src/components/SnHeaderBar/index.vue')['default']
+    SnLoading: typeof import('./src/components/SnLoading/index.vue')['default']
   }
 }

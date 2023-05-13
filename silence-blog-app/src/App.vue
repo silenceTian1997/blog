@@ -1,31 +1,21 @@
 <script setup lang="ts">
-import SnHeaderBar from "./components/SnHeaderBar.vue";
+import SnHeaderBar from "./components/SnHeaderBar/index.vue";
+import SnFooterBar from "./components/SnFooterBar/index.vue";
 </script>
-
 <template>
   <div>
-    <SnHeaderBar />
-    <router-view v-slot="{ Component }">
-      <KeepAlive :include="['about']">
-        <component :is='Component'></component>
-      </KeepAlive>
-    </router-view>
+    <NLoadingBarProvider>
+      <SnHeaderBar />
+      <router-view v-slot="{ Component }">
+        <KeepAlive :include="['about']">
+          <component :is='Component'></component>
+        </KeepAlive>
+      </router-view>
+      <SnFooterBar />
+    </NLoadingBarProvider>
   </div>
 </template>
 
-<style  scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
+<style>
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
