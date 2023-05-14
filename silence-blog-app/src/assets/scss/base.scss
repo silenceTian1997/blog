@@ -1,0 +1,44 @@
+//元素初始化
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+header,
+footer,
+body,
+div,
+span,
+a,
+img,
+p,
+table,
+tbody,
+tr,td,
+img,
+video,
+canvas,
+section,
+input,
+button,
+form,
+code{
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+li{
+	list-style: none;
+}
+img{
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: baseline;
+}
+input{
+	outline: none;
+}

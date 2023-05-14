@@ -1,73 +1,58 @@
-<script setup lang="ts">
-import { h, ref, Component, watch } from 'vue'
-import { NIcon } from 'naive-ui'
-import type { MenuOption } from 'naive-ui'
-import {
-  BookOutline as BookIcon,
-} from '@vicons/ionicons5'
-import about from '../../views/about/index.vue'
-console.log(about)
-function renderIcon(icon: Component) {
-  return () => h(NIcon, null, { default: () => h(icon) })
-}
-const menuOptions: MenuOption[] = [
-  {
-    label: () =>
-      h(
-        'a',
-        {
-          href: '#/about',
-          rel: 'noopenner noreferrer'
-        },
-        '且听风吟'
-      ),
-    key: 'hear-the-wind-sing',
-    icon: renderIcon(BookIcon)
-  },
-  {
-    label: '1973年的弹珠玩具',
-    key: 'pinball-1973',
-    icon: renderIcon(BookIcon),
-    children: [
-      {
-        label: '鼠',
-        key: 'rat'
-      },
-      {
-        label: '鼠11鼠11鼠11鼠11鼠11鼠11鼠11',
-        key: 'rat1'
-      }
-    ]
-  },
-]
-
-const activeKey = ref<string | null>(null)
-
-watch(() => activeKey.value, (val, oval) => {
-  console.log(val, oval)
-})
-
+<script setup lang="ts" name="SnHeaderBar">
 
 </script>
 <template>
-  <header class="sn-header">
-    <img class="logo" alt="">
-  </header>
+  <div class="sn-header">
+    <header class="sn-header--content flex-y-center">
+      <img class="logo" src="@/assets/logo.webp" alt="">
+
+      <ul class="sn-header--menu flex-y-center">
+        <li class="sn-header--menu-item">首页</li>
+        <li class="sn-header--menu-item">时间轴</li>
+        <li class="sn-header--menu-item">关于</li>
+      </ul>
+      <img class="sn-header--author" src="//p3-pc-sign.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813c001_9807ef9d8cf1499bb95ba5163623869b.jpeg?x-expires=1684155600&x-signature=llfIasX91TfwSPi7y0VEJmyTmS4%3D&from=2480802190" alt="">
+    </header>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @include b(header) {
-  width: 100%;
-  height: 90px;
-  background-color: #fff;
+  width: 100vw;
+  height: var(--header-height);
+  background-color: var(--header-bgc);
+  backdrop-filter: blur(20px);
   position: sticky;
   top: 0;
 
-  .logo {
-    width: 120px;
-    height: 80px;
-    pointer-events: none;
-    background-color: green;
+  @include m(content) {
+    width: 1720px;
+    margin: 0 auto;
+    height: 100%;
+
+    .logo {
+      width: 96px;
+      height: 66px;
+      pointer-events: none;
+    }
   }
+
+  @include m(menu){
+    height: 100%;
+    margin-left: auto;
+
+    &-item{
+      color: var(--text-color);
+      padding: 8px;
+    }
+  }
+  @include m(author){
+    width: 33.33px;
+    height: 33.33px;
+    margin-left: 16px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
 }
 </style>
