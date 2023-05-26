@@ -1,17 +1,16 @@
 <script lang='ts' setup>
 import gsap from 'gsap'
 import { onMounted , ref } from 'vue'
-// console.log()
 const loadingFlag = ref(true)
 onMounted(() => {
-    // loadingFlag.value = true
+    loadingFlag.value = true
     const cirCleDomList: NodeListOf<HTMLDListElement> = document.querySelectorAll('.icon-circle')
-    
     cirCleDomList.forEach((el: HTMLDListElement,index:number) => {
         if(index === cirCleDomList.length - 1){
             moveElementToCenter(el,()=>{
                 const timeLine = gsap.timeline({
                     onComplete:()=>{
+                        console.log('finish')
                         loadingFlag.value = false
                     }
                 })
@@ -78,25 +77,21 @@ onMounted(() => {
         }
         positionX = centerX - x;
         positionY = centerY - y
-        gsap.fromTo(element, { x: x, y: y, opacity: 0, scale: .2, ease: "power1", rotation: 0,  }, { x: positionX, y: positionY, opacity: 1, scale: 2, ease: "power1", rotation: 360, transition: 2,onComplete: cb && cb() })
+        gsap.fromTo(element, { x: x, y: y, opacity: 0, scale: .2, ease: "power1", rotation: 0,  },{ x: positionX, y: positionY, opacity: 1, scale: 2, ease: "power1", rotation: 360, transition: 2,  onComplete: cb && cb() })
     }
 
 })
 </script>
 
 <template>
-    <div class="sn-loading" >
+    <div class="sn-loading" v-show="loadingFlag">
         <div class="icon-circle"></div>
         <div class="icon-circle"></div>
         <div class="icon-circle"></div>
         <div class="icon-circle"></div>
-
         <div class="center-circle">
-
             <span class="center-text">♥</span>
         </div>
-
-
     </div>
 </template>
 <style lang='scss' scoped>

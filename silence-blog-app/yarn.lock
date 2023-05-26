@@ -146,6 +146,11 @@
   "resolved" "https://registry.npmjs.org/@types/node/-/node-20.1.0.tgz"
   "version" "20.1.0"
 
+"@types/web-bluetooth@^0.0.17":
+  "integrity" "sha512-4p9vcSmxAayx72yn70joFoL44c9MO/0+iVEBIQXe3v2h2SiAsEIo/G5v6ObFWvNKRFjbrVadNf9LqEEZeQPzdA=="
+  "resolved" "https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.17.tgz"
+  "version" "0.0.17"
+
 "@vicons/ionicons5@^0.12.0":
   "integrity" "sha512-Iy1EUVRpX0WWxeu1VIReR1zsZLMc4fqpt223czR+Rpnrwu7pt46nbnC2ycO7ItI/uqDLJxnbcMC7FujKs9IfFA=="
   "resolved" "https://registry.npmjs.org/@vicons/ionicons5/-/ionicons5-0.12.0.tgz"
@@ -359,6 +364,28 @@
   "integrity" "sha512-BHGyyGN3Q97EZx0taMQ+OLNuZcW3d37ZEVmEAyeoA9ERdGvm9Irc/0Fua8SNyOtV1w6BS4q25wbMzJujO9HIfQ=="
   "resolved" "https://registry.npmjs.org/@vue/shared/-/shared-3.2.47.tgz"
   "version" "3.2.47"
+
+"@vueuse/core@*", "@vueuse/core@^10.1.2":
+  "integrity" "sha512-roNn8WuerI56A5uiTyF/TEYX0Y+VKlhZAF94unUfdhbDUI+NfwQMn4FUnUscIRUhv3344qvAghopU4bzLPNFlA=="
+  "resolved" "https://registry.npmmirror.com/@vueuse/core/-/core-10.1.2.tgz"
+  "version" "10.1.2"
+  dependencies:
+    "@types/web-bluetooth" "^0.0.17"
+    "@vueuse/metadata" "10.1.2"
+    "@vueuse/shared" "10.1.2"
+    "vue-demi" ">=0.14.0"
+
+"@vueuse/metadata@10.1.2":
+  "integrity" "sha512-3mc5BqN9aU2SqBeBuWE7ne4OtXHoHKggNgxZR2K+zIW4YLsy6xoZ4/9vErQs6tvoKDX6QAqm3lvsrv0mczAwIQ=="
+  "resolved" "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-10.1.2.tgz"
+  "version" "10.1.2"
+
+"@vueuse/shared@10.1.2":
+  "integrity" "sha512-1uoUTPBlgyscK9v6ScGeVYDDzlPSFXBlxuK7SfrDGyUTBiznb3mNceqhwvZHjtDRELZEN79V5uWPTF1VDV8svA=="
+  "resolved" "https://registry.npmmirror.com/@vueuse/shared/-/shared-10.1.2.tgz"
+  "version" "10.1.2"
+  dependencies:
+    "vue-demi" ">=0.14.0"
 
 "acorn@^8.5.0", "acorn@^8.8.2":
   "integrity" "sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw=="
@@ -999,6 +1026,11 @@
   dependencies:
     "evtd" "^0.2.2"
 
+"vue-demi@>=0.14.0":
+  "integrity" "sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA=="
+  "resolved" "https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.5.tgz"
+  "version" "0.14.5"
+
 "vue-router@^4.2.0":
   "integrity" "sha512-c+usESa6ZoWsm4PPdzRSyenp5A4dsUtnDJnrI03fY1IpIihA9TK3x5ffgkFDpjhLJZewsXoKURapNLFdZjuqTg=="
   "resolved" "https://registry.npmmirror.com/vue-router/-/vue-router-4.2.0.tgz"
@@ -1023,7 +1055,7 @@
     "@volar/vue-typescript" "1.6.4"
     "semver" "^7.3.8"
 
-"vue@^3.0.0", "vue@^3.0.11", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.47", "vue@2 || 3", "vue@3.2.47":
+"vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.0.11", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.47", "vue@2 || 3", "vue@3.2.47":
   "integrity" "sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.47.tgz"
   "version" "3.2.47"
